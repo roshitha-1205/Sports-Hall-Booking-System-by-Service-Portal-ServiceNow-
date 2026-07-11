@@ -1,0 +1,210 @@
+<!-- Sports Zone - HTML Template -->
+<div class="sports-zone">
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <div class="logo-emoji">
+                <span>⚡</span>
+            </div>
+            <div class="logo-text">
+                <span class="main">Sports Zone</span>
+                <span class="sub">⚡ Book · Play · Win ⚡</span>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <span class="active" id="bookVenueBtn"><i class="fas fa-calendar-check"></i> Book Venue</span>
+            <span id="myBookingsBtn"><i class="fas fa-list-ul"></i> My Bookings</span>
+            <span id="helpBtn"><i class="fas fa-question-circle"></i> Help</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="hero" id="heroSection">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <i class="fas fa-bolt"></i> 12+ venues available
+            </div>
+            <h1>
+                Find Your <span class="highlight">Perfect</span><br />Sports Venue
+            </h1>
+            <p>
+                <i class="fas fa-check-circle" style="color:#ffd700;margin-right:6px;"></i>
+                Book badminton, tennis, cricket grounds and more. Instant confirmation, best prices.
+            </p>
+            <button class="hero-btn" id="exploreBtn">
+                <i class="fas fa-arrow-right"></i> Explore Venues
+            </button>
+        </div>
+        <div class="hero-right">
+            <div class="sport-card">🏀</div>
+            <div class="sport-card">⚽</div>
+            <div class="sport-card">🏸</div>
+            <div class="sport-card">🎾</div>
+            <div class="sport-card">🏏</div>
+            <div class="sport-card">🏊</div>
+            <div class="sport-card">🚴</div>
+            <div class="sport-card">🥊</div>
+        </div>
+    </div>
+
+    <!-- WIDGETS GRID -->
+    <div class="widgets-grid" id="bookingSection">
+        <!-- LEFT: Sport Selection -->
+        <div class="sport-widget">
+            <h3><i class="fas fa-regular fa-ball"></i> Select Your Sport</h3>
+            <div class="sport-list" id="sportList">
+                <div class="sport-item" data-sport="Badminton">
+                    <input type="radio" name="sport" id="sportBadminton" value="Badminton" checked />
+                    <span class="sport-icon">🏸</span>
+                    <label for="sportBadminton">Badminton</label>
+                    <span class="sport-badge">$24</span>
+                </div>
+                <div class="sport-item" data-sport="Tennis">
+                    <input type="radio" name="sport" id="sportTennis" value="Tennis" />
+                    <span class="sport-icon">🎾</span>
+                    <label for="sportTennis">Tennis</label>
+                    <span class="sport-badge">$32</span>
+                </div>
+                <div class="sport-item" data-sport="Cricket">
+                    <input type="radio" name="sport" id="sportCricket" value="Cricket" />
+                    <span class="sport-icon">🏏</span>
+                    <label for="sportCricket">Cricket Ground</label>
+                    <span class="sport-badge">$45</span>
+                </div>
+                <div class="sport-item" data-sport="Football">
+                    <input type="radio" name="sport" id="sportFootball" value="Football" />
+                    <span class="sport-icon">⚽</span>
+                    <label for="sportFootball">Football</label>
+                    <span class="sport-badge">$38</span>
+                </div>
+                <div class="sport-item" data-sport="Basketball">
+                    <input type="radio" name="sport" id="sportBasketball" value="Basketball" />
+                    <span class="sport-icon">🏀</span>
+                    <label for="sportBasketball">Basketball</label>
+                    <span class="sport-badge">$28</span>
+                </div>
+                <div class="sport-item" data-sport="Swimming">
+                    <input type="radio" name="sport" id="sportSwimming" value="Swimming" />
+                    <span class="sport-icon">🏊</span>
+                    <label for="sportSwimming">Swimming</label>
+                    <span class="sport-badge">$20</span>
+                </div>
+            </div>
+            <button class="proceed-btn" id="proceedBtn">
+                <i class="fas fa-arrow-right"></i> Proceed to Payment
+            </button>
+            <div class="hint-text">
+                <i class="fas fa-info-circle"></i> Select a sport, then click Proceed
+            </div>
+        </div>
+
+        <!-- RIGHT: Payment -->
+        <div class="payment-widget">
+            <h3><i class="fas fa-credit-card"></i> Payment Details</h3>
+            <div class="payment-details" id="paymentDetails">
+                <div class="pay-row">
+                    <span class="label">Sport</span>
+                    <span class="value" id="displaySport">Badminton 🏸</span>
+                </div>
+                <div class="pay-row">
+                    <span class="label">Venue</span>
+                    <span class="value" id="displayVenue">Indoor Badminton Court</span>
+                </div>
+                <div class="pay-row">
+                    <span class="label">Date & Time</span>
+                    <span class="value" id="displayDate">Today, 6:00 PM</span>
+                </div>
+                <div class="pay-row total">
+                    <span class="label">Total Amount</span>
+                    <span class="value" id="displayAmount">$24.00</span>
+                </div>
+            </div>
+            <button class="submit-btn" id="payBtn">
+                <i class="fas fa-lock"></i> Submit Payment
+            </button>
+            <div class="status-box" id="statusBox">
+                <i class="fas fa-clock"></i>
+                <span id="statusText">Select a sport to begin</span>
+            </div>
+            <div class="email-confirm" id="emailBox">
+                <i class="fas fa-envelope"></i>
+                <span><strong>✓ Confirmation email</strong> sent with venue details</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOW BAR -->
+    <div class="flow-bar" id="flowBar">
+        <div class="flow-step" data-step="1">
+            <div class="dot active" id="dot1">
+                <span class="step-num">1</span>
+                <i class="fas fa-check"></i>
+            </div>
+            <span class="step-label active-label" id="label1">Select</span>
+        </div>
+        <div class="flow-line" id="line1"></div>
+        <div class="flow-step" data-step="2">
+            <div class="dot" id="dot2">
+                <span class="step-num">2</span>
+                <i class="fas fa-check"></i>
+            </div>
+            <span class="step-label" id="label2">Proceed</span>
+        </div>
+        <div class="flow-line" id="line2"></div>
+        <div class="flow-step" data-step="3">
+            <div class="dot" id="dot3">
+                <span class="step-num">3</span>
+                <i class="fas fa-check"></i>
+            </div>
+            <span class="step-label" id="label3">Payment</span>
+        </div>
+        <div class="flow-line" id="line3"></div>
+        <div class="flow-step" data-step="4">
+            <div class="dot" id="dot4">
+                <span class="step-num">4</span>
+                <i class="fas fa-check"></i>
+            </div>
+            <span class="step-label" id="label4">Confirm</span>
+        </div>
+    </div>
+
+    <!-- EXPLORE VENUES -->
+    <div class="explore-section" id="exploreSection">
+        <h3><i class="fas fa-map-pin"></i> Explore All Venues</h3>
+        <button class="back-btn" id="backFromExploreBtn"><i class="fas fa-arrow-left"></i> Back to Booking</button>
+        <div class="explore-grid" id="exploreGrid"></div>
+    </div>
+
+    <!-- MY BOOKINGS -->
+    <div class="bookings-list" id="bookingsList">
+        <h3>
+            <i class="fas fa-list-ul"></i> My Bookings
+            <span class="booking-count" id="bookingCount"></span>
+        </h3>
+        <div id="bookingsContainer"></div>
+    </div>
+
+    <!-- HELP -->
+    <div class="bookings-list" id="helpSection">
+        <h3><i class="fas fa-question-circle"></i> Help Center</h3>
+        <div class="help-content">
+            <div class="help-block">
+                <h4>📖 How to Book</h4>
+                <p>1. Select a sport from the list</p>
+                <p>2. Click "Proceed to Payment"</p>
+                <p>3. Submit your payment</p>
+                <p>4. Get confirmation email with venue details</p>
+            </div>
+            <div class="help-block">
+                <h4>📧 Support</h4>
+                <p>Email: support@sportszone.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+            </div>
+            <div class="help-block">
+                <h4>⏰ Hours</h4>
+                <p>Mon-Fri: 6:00 AM - 10:00 PM</p>
+                <p>Sat-Sun: 8:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
